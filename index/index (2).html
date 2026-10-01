@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SwiftRoute Logistics | Last-Mile Delivery Platform</title>
+<meta name="description" content="Track shipments, book deliveries and monitor last-mile performance with SwiftRoute Logistics.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="#home" class="brand"><span class="mark">SR</span>SwiftRoute Logistics</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <nav id="menu" aria-label="Main">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#tracking">Tracking</a><a href="#dashboard">Dashboard</a><a href="#calculator">Calculator</a><a href="#contact">Contact</a>
+      <a href="#tracking" class="btn btn-accent small">Track Shipment</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <h1>Smarter Last-Mile Delivery. Real-Time Visibility.</h1>
+      <p class="lead">SwiftRoute Logistics connects businesses, delivery partners and customers through a technology-enabled last-mile delivery platform.</p>
+      <div class="actions"><a href="#tracking" class="btn btn-accent">Track Your Shipment</a><a href="#calculator" class="btn btn-ghost">Calculate Delivery Cost</a></div>
+      <p class="tag">Faster Deliveries. Smarter Logistics. Happier Customers.</p>
+    </div>
+    <div class="route" role="img" aria-label="Illustration of a shipment moving along a route from Surat to Ahmedabad">
+      <div class="stop done"><b>Picked up</b><small>Surat City Hub</small></div>
+      <div class="stop done"><b>At sorting hub</b><small>Vadodara</small></div>
+      <div class="stop now"><b>In transit</b><small>TRK1025 &middot; arriving 6:30 PM</small></div>
+      <div class="stop"><b>Delivered</b><small>Ahmedabad</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt"><div class="wrap">
+  <h2>What you get with SwiftRoute</h2>
+  <div class="grid4">
+    <article class="card"><div class="ico">&#128205;</div><h3>Real-Time Tracking</h3><p>Monitor shipment movement and delivery status.</p></article>
+    <article class="card"><div class="ico">&#9889;</div><h3>Faster Delivery</h3><p>Optimize routes and improve delivery efficiency.</p></article>
+    <article class="card"><div class="ico">&#8377;</div><h3>Transparent Pricing</h3><p>Estimate delivery costs before booking.</p></article>
+    <article class="card"><div class="ico">&#128200;</div><h3>Data-Driven Operations</h3><p>Managers get real-time KPIs for better decisions.</p></article>
+  </div>
+  <p class="links"><a href="#services">See our services</a> <a href="#tracking">Track a shipment</a></p>
+</div></section>
+
+<section id="about" class="sec"><div class="wrap">
+  <h2>About SwiftRoute</h2>
+  <div class="grid2">
+    <div>
+      <h3>Who we are</h3>
+      <p>SwiftRoute Logistics is a technology-enabled last-mile delivery platform designed to help businesses manage local and urban deliveries with greater visibility, reliability and efficiency.</p>
+      <h3>Service area</h3>
+      <p>Major urban and Tier-2 cities across India.</p>
+      <h3>Value proposition</h3>
+      <blockquote>Our platform combines shipment visibility, delivery management and operational analytics in one simple digital platform.</blockquote>
+    </div>
+    <div>
+      <h3>Target customers</h3>
+      <ul class="chips"><li>E-commerce businesses</li><li>Retailers</li><li>SMEs</li><li>D2C brands</li><li>Restaurants</li><li>Pharmaceutical businesses</li><li>Local businesses</li></ul>
+      <h3>Why SwiftRoute?</h3>
+      <ul class="ticks"><li>Real-time shipment visibility</li><li>Digital delivery management</li><li>Transparent pricing</li><li>Data-driven decisions</li><li>Customer communication</li><li>Operational performance monitoring</li></ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="services" class="sec alt"><div class="wrap">
+  <h2>Services</h2>
+  <div class="grid5">
+    <article class="card"><h3>Standard Delivery</h3><p>Same-city delivery within 24&ndash;48 hours.</p><p class="price">&#8377;150</p><button class="btn btn-primary small" data-book="Standard">Book Now</button></article>
+    <article class="card"><h3>Express Delivery</h3><p>Priority same-day delivery.</p><p class="price">&#8377;300</p><button class="btn btn-primary small" data-book="Express">Book Now</button></article>
+    <article class="card"><h3>Bulk Delivery</h3><p>10+ packages.</p><p class="price">&#8377;1,000</p><button class="btn btn-primary small" data-book="Bulk">Book Now</button></article>
+    <article class="card"><h3>Scheduled Delivery</h3><p>Customer-selected delivery slot.</p><p class="price">&#8377;200</p><button class="btn btn-primary small" data-book="Standard">Book Now</button></article>
+    <article class="card"><h3>Business Delivery</h3><p>Dedicated B2B delivery service.</p><p class="price">&#8377;500</p><button class="btn btn-primary small" data-book="Bulk">Book Now</button></article>
+  </div>
+  <p class="note">Prices are starting rates. Use the <a href="#calculator">calculator</a> for a route-based estimate.</p>
+</div></section>
+
+<section id="tracking" class="sec"><div class="wrap narrow">
+  <h2>Track Your Shipment</h2>
+  <form id="trackForm" class="row" novalidate>
+    <label for="orderId" class="sr">Enter Order ID</label>
+    <input id="orderId" placeholder="Enter Order ID, e.g. TRK1025" autocomplete="off">
+    <button class="btn btn-primary">Track Shipment</button>
+  </form>
+  <p class="note">Try TRK1025, TRK1026, TRK1027 or TRK1028.</p>
+  <div id="trackResult" aria-live="polite"></div>
+  <p class="links"><a href="#dashboard">View manager dashboard</a></p>
+</div></section>
+
+<section id="dashboard" class="sec alt"><div class="wrap">
+  <div class="dash-head">
+    <div><h2>Logistics Operations Dashboard</h2><p>Real-time overview of delivery performance</p></div>
+    <div><label for="period">Period</label> <select id="period"><option value="today">Today</option><option value="week" selected>This Week</option><option value="month">This Month</option></select></div>
+  </div>
+  <div class="grid6" id="kpis"></div>
+  <div class="grid2 charts">
+    <div class="card"><h3>Delivery status</h3><div class="donut-wrap"><div class="donut" id="donut" role="img" aria-label="Doughnut chart of delivery status"></div><ul id="legend" class="legend"></ul></div></div>
+    <div class="card"><h3>Daily deliveries</h3><div class="bars" id="bars" role="img" aria-label="Bar chart of daily deliveries"></div></div>
+  </div>
+  <div class="insights"><h3>Manager Insights</h3><ul id="insights"></ul></div>
+  <p class="note">Dashboard figures shown are simulated data for academic demonstration.</p>
+  <p class="links"><a href="#tracking">Check a specific shipment</a></p>
+</div></section>
+
+<section id="calculator" class="sec"><div class="wrap narrow">
+  <h2>Calculate Your Delivery Cost</h2>
+  <form id="calcForm" class="form" novalidate>
+    <div><label for="from">Pickup City</label><select id="from"></select></div>
+    <div><label for="to">Delivery City</label><select id="to"></select></div>
+    <div><label for="wt">Package Weight</label><select id="wt"><option value="0">0&ndash;2 kg</option><option value="40">2&ndash;5 kg</option><option value="90">5&ndash;10 kg</option><option value="160">10&ndash;20 kg</option></select></div>
+    <div><label for="type">Delivery Type</label><select id="type"><option>Standard</option><option>Express</option><option>Bulk</option></select></div>
+    <div class="full"><label for="km">Distance (km)</label><input id="km" type="number" min="1" placeholder="e.g. 265"></div>
+    <div class="full"><button class="btn btn-primary">Calculate Cost</button></div>
+  </form>
+  <div id="calcResult" aria-live="polite"></div>
+</div></section>
+
+<section id="booking" class="sec alt"><div class="wrap narrow">
+  <h2>Book a Delivery</h2>
+  <form id="bookForm" class="form" novalidate>
+    <div><label for="bName">Customer Name</label><input id="bName"></div>
+    <div><label for="bEmail">Email</label><input id="bEmail" type="email"></div>
+    <div><label for="bPhone">Phone</label><input id="bPhone" type="tel"></div>
+    <div><label for="bDate">Preferred Delivery Date</label><input id="bDate" type="date"></div>
+    <div><label for="bFrom">Pickup Location</label><input id="bFrom"></div>
+    <div><label for="bTo">Delivery Location</label><input id="bTo"></div>
+    <div><label for="bWt">Package Weight</label><select id="bWt"><option>0&ndash;2 kg</option><option>2&ndash;5 kg</option><option>5&ndash;10 kg</option><option>10&ndash;20 kg</option></select></div>
+    <div><label for="bType">Delivery Type</label><select id="bType"><option>Standard</option><option>Express</option><option>Bulk</option></select></div>
+    <div class="full"><button class="btn btn-primary">Book Delivery</button></div>
+  </form>
+  <div id="bookMsg" aria-live="polite"></div>
+</div></section>
+
+<section id="contact" class="sec"><div class="wrap">
+  <h2>Contact SwiftRoute Logistics</h2>
+  <div class="grid2">
+    <div>
+      <p><b>Address:</b> Ahmedabad, Gujarat, India</p>
+      <p><b>Phone:</b> <a href="tel:+919876543210">+91 98765 43210</a></p>
+      <p><b>Email:</b> <a href="mailto:contact@swiftroutelogistics.com">contact@swiftroutelogistics.com</a></p>
+      <div class="actions">
+        <a class="btn btn-primary small" href="https://www.google.com/maps/search/?api=1&query=Ahmedabad+Gujarat+India" target="_blank" rel="noopener noreferrer">Google Maps</a>
+        <a class="btn btn-ghost-dark small" href="https://www.linkedin.com/company/swiftroute-logistics" target="_blank" rel="noopener noreferrer">LinkedIn company profile</a>
+      </div>
+      <h3>Industry resources</h3>
+      <ul class="plain">
+        <li><a href="https://www.indiabrandequity.org" target="_blank" rel="noopener noreferrer">India Brand Equity Foundation &ndash; logistics sector overview</a></li>
+        <li><a href="https://logistics.gov.in" target="_blank" rel="noopener noreferrer">Government of India &ndash; Logistics Division, DPIIT</a></li>
+      </ul>
+      <p class="links"><a href="#home">Back to home</a></p>
+    </div>
+    <form id="enqForm" class="form one" novalidate>
+      <div><label for="eName">Name</label><input id="eName"></div>
+      <div><label for="eEmail">Email</label><input id="eEmail" type="email"></div>
+      <div><label for="ePhone">Phone</label><input id="ePhone" type="tel"></div>
+      <div><label for="eType">Enquiry Type</label><select id="eType"><option>Shipment Tracking</option><option>Delivery Booking</option><option>Pricing</option><option>Business Partnership</option><option>Customer Support</option></select></div>
+      <div><label for="eMsg">Message</label><textarea id="eMsg" rows="4"></textarea></div>
+      <div><button class="btn btn-primary">Submit Enquiry</button></div>
+      <div id="enqMsg" aria-live="polite"></div>
+    </form>
+  </div>
+</div></section>
+</main>
+
+<footer>
+  <div class="wrap fgrid">
+    <div><h3>SwiftRoute Logistics</h3><p>Smarter Last-Mile Delivery. Real-Time Visibility.</p><a href="https://www.linkedin.com/company/swiftroute-logistics" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
+    <div><h3>Quick Links</h3><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#tracking">Tracking</a><a href="#dashboard">Dashboard</a><a href="#calculator">Calculator</a><a href="#contact">Contact</a></div>
+    <div><h3>Services</h3><a href="#services">Standard Delivery</a><a href="#services">Express Delivery</a><a href="#services">Bulk Delivery</a><a href="#services">Business Delivery</a></div>
+    <div><h3>Contact</h3><p>Ahmedabad, Gujarat</p><a href="tel:+919876543210">+91 98765 43210</a><a href="mailto:contact@swiftroutelogistics.com">contact@swiftroutelogistics.com</a></div>
+  </div>
+  <p class="copy">&copy; <span id="year">2026</span> SwiftRoute Logistics. All Rights Reserved.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
